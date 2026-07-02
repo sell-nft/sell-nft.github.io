@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://sell-nft.github.io/sitemap.xml

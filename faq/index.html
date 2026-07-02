@@ -1,0 +1,583 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Sell NFT NFT FAQ Help Center</title>
+  <meta name="description" content="Frequently asked questions regarding gas fees, minting, safety, and royalties.">
+  <link rel="canonical" href="https://sell-nft.github.io/faq/">
+  <meta name="robots" content="index,follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Sell NFT NFT FAQ Help Center">
+  <meta property="og:description" content="Frequently asked questions regarding gas fees, minting, safety, and royalties.">
+  <meta property="og:url" content="https://sell-nft.github.io/faq/">
+  <meta property="og:image" content="https://sell-nft.github.io/og-cover.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Sell NFT NFT FAQ Help Center">
+  <meta name="twitter:description" content="Frequently asked questions regarding gas fees, minting, safety, and royalties.">
+  <link rel="icon" type="image/png" href="../favicon.png">
+  <link rel="manifest" href="../site.webmanifest">
+  <link rel="apple-touch-icon" href="../favicon.png">
+  <style>
+
+  :root{
+    --bg:#FBFAF7; --panel:#FFFFFF; --field:#F2F6F4;
+    --ink:#0F1A18; --muted:#5C6A66; --faint:#93A09B;
+    --line:rgba(15,26,24,.09); --line-2:rgba(15,26,24,.05);
+    --accent:#2081E2; --accent-ink:#175FA7; --accent-soft:rgba(32,129,226,.1);
+    --pos:#15A34A;
+    --radius:22px; --radius-sm:14px;
+    --shadow-card:0 1px 0 rgba(15,26,24,.03), 0 34px 64px -30px rgba(10,50,44,.28), 0 10px 24px -18px rgba(10,50,44,.16);
+    --shadow-soft:0 1px 0 rgba(15,26,24,.02), 0 20px 44px -32px rgba(10,50,44,.22);
+    --ui:"Space Grotesk",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+    --body:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0; overflow-x:hidden}
+  body{background:var(--bg); color:var(--ink); font-family:var(--body); line-height:1.55; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; position:relative}
+  a{color:inherit; text-decoration:none}
+  a.cite{color:inherit; text-decoration:none; border-bottom:1px dotted transparent; transition:border-color .15s ease}
+  a.cite:hover{border-bottom-color:var(--faint)}
+  img{display:block; max-width:100%}
+  button{font:inherit; cursor:pointer; border:none; background:none; color:inherit}
+  h1,h2,h3,p{margin:0}
+
+  /* texture: diagonal hatch + soft glow */
+  .bg{position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden}
+  .bg .glow{position:absolute; inset:0; background:
+      radial-gradient(760px 480px at 50% -6%, rgba(32,129,226,.11), transparent 62%),
+      radial-gradient(620px 520px at 90% 16%, rgba(32,129,226,.06), transparent 60%);}
+  .bg .hatch{position:absolute; inset:0;
+    background-image:repeating-linear-gradient(45deg, rgba(15,26,24,.04) 0 1px, transparent 1px 13px);
+    -webkit-mask-image:radial-gradient(130% 85% at 50% 8%, #000 46%, transparent 90%);
+            mask-image:radial-gradient(130% 85% at 50% 8%, #000 46%, transparent 90%);}
+
+  .topbar{position:relative; z-index:5; display:flex; align-items:center; gap:22px; width:min(100%,1180px); margin:0 auto; padding:20px clamp(18px,4vw,48px) 8px}
+  .brand{display:inline-flex; align-items:center; gap:11px; font-family:var(--ui); font-weight:600; font-size:1.05rem; letter-spacing:-.01em}
+  .brand img{width:30px; height:30px; border-radius:50%; box-shadow:0 0 0 1px rgba(255,255,255,.8), 0 8px 18px -12px rgba(32,129,226,.5)}
+  .spacer{flex:1}
+  .nav{display:flex; align-items:center; gap:clamp(16px,2.6vw,30px)}
+  .nav a{font-family:var(--ui); font-weight:500; font-size:.92rem; color:var(--muted); transition:color .16s ease}
+  .nav a:hover{color:var(--accent-ink)}
+
+  .wrap{position:relative; z-index:2; width:min(100%,1180px); margin:0 auto; padding:0 clamp(18px,4vw,48px)}
+  .sec{padding-top:clamp(50px,7vh,90px); padding-bottom:clamp(50px,7vh,90px)}
+  .sec-head{max-width:60ch; margin:0 0 clamp(26px,4vh,40px)}
+  .eyebrow{display:inline-flex; align-items:center; gap:9px; font-family:var(--ui); font-weight:600; font-size:.78rem; letter-spacing:.14em; text-transform:uppercase; color:var(--accent-ink)}
+  .eyebrow .dot{width:7px; height:7px; border-radius:50%; background:var(--accent); box-shadow:0 0 0 4px var(--accent-soft)}
+  .eyebrow svg{width:15px; height:15px}
+  .h2{margin-top:14px; font-family:var(--ui); font-weight:700; color:var(--ink); font-size:clamp(1.9rem,3.4vw,2.7rem); line-height:1.04; letter-spacing:-.02em}
+  .sec-head p{margin-top:14px; color:var(--muted); font-size:clamp(1rem,1.3vw,1.12rem); line-height:1.6}
+
+  /* hero - centered headline + WIDE route band */
+  .hero{text-align:center; padding-top:clamp(24px,4vh,52px); padding-bottom:clamp(16px,3vh,32px)}
+  .hero .eyebrow{margin:0 auto}
+  .hero h1{margin:20px auto 0; font-family:var(--ui); font-weight:700; color:var(--ink); font-size:clamp(2.9rem,6.6vw,5rem); line-height:.98; letter-spacing:-.035em; max-width:16ch}
+  .deck{max-width:50ch; margin:18px auto 0; color:var(--muted); font-size:clamp(1.04rem,1.5vw,1.2rem); line-height:1.58}
+  .deck strong{color:var(--ink); font-weight:600; box-shadow:inset 0 -.36em 0 var(--accent-soft)}
+  .cta-row{display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:14px; margin:26px 0 0}
+  .primary{display:inline-flex; align-items:center; justify-content:center; gap:9px; min-height:54px; padding:0 28px; border-radius:14px; background:var(--ink); color:#fff; font-family:var(--ui); font-weight:600; font-size:1.02rem; letter-spacing:-.01em; box-shadow:0 16px 30px -16px rgba(15,26,24,.7); transition:transform .18s ease, filter .18s ease}
+  .primary:hover{transform:translateY(-1px); filter:brightness(1.08)}
+  .primary svg{width:17px; height:17px}
+  .ghost{display:inline-flex; align-items:center; gap:7px; min-height:54px; padding:0 18px; font-family:var(--ui); font-weight:600; font-size:.98rem; color:var(--muted); transition:color .16s ease}
+  .ghost:hover{color:var(--accent-ink)}
+  .ghost svg{width:15px; height:15px}
+
+  /* WIDE route band */
+  .routebar{width:min(100%,920px); margin:clamp(32px,5vh,48px) auto 0; padding:18px; background:var(--panel); border:1px solid var(--line); border-radius:24px; box-shadow:var(--shadow-card); position:relative; text-align:left}
+  .routebar::before{content:""; position:absolute; inset:0 0 auto; height:1px; border-radius:24px 24px 0 0; background:linear-gradient(90deg, transparent, rgba(32,129,226,.4), transparent)}
+  .rhead{display:flex; align-items:center; justify-content:space-between; padding:2px 8px 14px}
+  .rhead .ct{font-family:var(--ui); font-weight:600; font-size:1.04rem}
+  .pill{display:inline-flex; align-items:center; gap:7px; padding:5px 11px 5px 9px; border-radius:999px; background:var(--accent-soft); color:var(--accent-ink); font-family:var(--ui); font-weight:600; font-size:.76rem}
+  .pill .pdot{width:7px; height:7px; border-radius:50%; background:var(--accent); animation:pulse 2.4s ease-out infinite}
+  .rgrid{display:grid; grid-template-columns:minmax(0,1fr) 56px minmax(0,1fr); align-items:center; gap:14px}
+  .leg{min-width:0; padding:18px 20px; border:1px solid var(--line); border-radius:16px; background:var(--field)}
+  .leg .lab{display:block; color:var(--muted); font-size:.78rem; font-weight:600; letter-spacing:.06em; text-transform:uppercase}
+  .leg .legrow{display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:12px}
+  .leg .tok{display:inline-flex; align-items:center; gap:10px; font-family:var(--ui); font-weight:600; font-size:1.16rem}
+  .leg .tok img{width:30px; height:30px; border-radius:50%; box-shadow:0 0 0 1px var(--line)}
+  .leg .tok .cv{color:var(--faint); font-size:.78em}
+  .leg .gv{color:var(--faint); font-size:.86rem; white-space:nowrap}
+  .rswitch{width:48px; height:48px; justify-self:center; border-radius:50%; border:1px solid var(--line); background:var(--panel); color:var(--accent-ink); display:grid; place-items:center; box-shadow:0 8px 18px -10px rgba(10,50,44,.4); transition:transform .25s ease}
+  .rswitch svg{width:18px; height:18px}
+  .rswitch:hover{transform:rotate(180deg)}
+  .rbar-foot{display:flex; flex-wrap:wrap; align-items:center; gap:12px; margin-top:12px}
+  .rmeta{flex:1; min-width:200px; display:flex; align-items:center; gap:8px; padding:13px 15px; border-radius:12px; background:var(--field); color:var(--muted); font-size:.84rem}
+  .rmeta svg{width:15px; height:15px; color:var(--accent-ink); flex:none}
+  .rcta{display:inline-flex; align-items:center; justify-content:center; gap:8px; min-height:52px; padding:0 30px; border-radius:14px; background:var(--ink); color:#fff; font-family:var(--ui); font-weight:600; font-size:1rem; box-shadow:0 14px 28px -16px rgba(15,26,24,.65); transition:transform .18s ease, filter .18s ease}
+  .rcta:hover{transform:translateY(-1px); filter:brightness(1.08)}
+  .rnote{margin:11px 4px 0; color:var(--faint); font-size:.78rem}
+
+  /* why - icon-left rows */
+  .rows{display:grid; gap:12px}
+  .frow2{display:flex; align-items:flex-start; gap:18px; padding:22px 24px; background:var(--panel); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow-soft)}
+  .frow2 .ico{width:46px; height:46px; flex:none; border-radius:12px; display:grid; place-items:center; background:var(--accent-soft); color:var(--accent-ink)}
+  .frow2 .ico svg{width:22px; height:22px}
+  .frow2 h3{font-family:var(--ui); font-weight:600; font-size:1.12rem; color:var(--ink); letter-spacing:-.01em}
+  .frow2 p{margin-top:6px; color:var(--muted); font-size:.95rem; line-height:1.55; max-width:70ch}
+
+  /* how it works */
+  .steps{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+  .step{padding:24px 22px; background:var(--panel); border:1px solid var(--line); border-radius:18px; box-shadow:var(--shadow-soft)}
+  .step .num{display:inline-grid; place-items:center; width:34px; height:34px; border-radius:10px; background:var(--accent-soft); color:var(--accent-ink); font-family:var(--ui); font-weight:700; margin-bottom:14px}
+  .step h3{margin:0 0 8px; font-family:var(--ui); font-weight:600; font-size:1.12rem; color:var(--ink); letter-spacing:-.01em}
+  .step p{color:var(--muted); font-size:.94rem; line-height:1.55}
+
+  /* FAQ - 2-col cards */
+  .faq{display:grid; grid-template-columns:repeat(2,1fr); gap:14px}
+  .qa{padding:22px; background:var(--panel); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow-soft)}
+  .qa .qn{font-family:var(--ui); font-weight:700; font-size:.8rem; color:var(--accent-ink); letter-spacing:.04em}
+  .qa h3{margin:8px 0 8px; font-family:var(--ui); font-weight:600; font-size:1.08rem; color:var(--ink); letter-spacing:-.01em}
+  .qa p{color:var(--muted); font-size:.95rem; line-height:1.6}
+  .qa a:not(.cite){color:var(--accent-ink); font-weight:600; box-shadow:inset 0 -.34em 0 var(--accent-soft)}
+
+  /* related */
+  .related{display:grid; grid-template-columns:repeat(3,1fr); gap:14px}
+  .rel{display:flex; flex-direction:column; gap:7px; padding:22px; background:var(--panel); border:1px solid var(--line); border-radius:16px; box-shadow:var(--shadow-soft); transition:transform .16s ease, border-color .16s ease}
+  .rel:hover{transform:translateY(-2px); border-color:rgba(32,129,226,.35)}
+  .rel .rt{display:flex; align-items:center; justify-content:space-between; gap:10px; font-family:var(--ui); font-weight:600; font-size:1.05rem; color:var(--ink); letter-spacing:-.01em}
+  .rel .rt svg{width:16px; height:16px; color:var(--accent-ink); flex:none}
+  .rel p{color:var(--muted); font-size:.9rem; line-height:1.5}
+
+  .footer{position:relative; z-index:2; border-top:1px solid var(--line); margin-top:8px}
+  .footer .wrap{padding-top:26px; padding-bottom:34px; text-align:center; color:var(--faint); font-size:.84rem}
+  .footer b{color:var(--muted); font-weight:600}
+
+  @keyframes pulse{0%{box-shadow:0 0 0 0 var(--accent-soft)} 70%{box-shadow:0 0 0 8px rgba(32,129,226,0)} 100%{box-shadow:0 0 0 0 rgba(32,129,226,0)}}
+
+  @media (max-width:920px){
+    .nav{display:none}
+    .rgrid{grid-template-columns:1fr; gap:9px}
+    .rswitch{transform:rotate(90deg)}
+    .rswitch:hover{transform:rotate(270deg)}
+    .steps,.faq,.related{grid-template-columns:1fr}
+  }
+  @media (max-width:430px){
+    .hero h1{font-size:clamp(2.5rem,12vw,3.5rem)}
+    .cta-row .primary,.cta-row .ghost{width:100%}
+    .rbar-foot{flex-direction:column; align-items:stretch}
+    .rcta{width:100%}
+  }
+  @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important; transition-duration:.01ms!important}}
+  
+
+/* --- Satellite Layout Styles (Appended dynamically by Builder) --- */
+:root {
+  --bg-fallback: var(--bg, var(--base, #f9fafc));
+  --ink-body-fallback: var(--ink-body, var(--text, var(--ink, #1f2937)));
+  --muted-fallback: var(--muted, var(--quiet, #4b5563));
+  --panel-fallback: var(--panel, var(--surface, #ffffff));
+  --panel-strong-fallback: var(--panel-strong, var(--surface-soft, var(--base-deep, #f3f4f6)));
+  --line-fallback: var(--line, rgba(0, 0, 0, 0.08));
+  --line-strong-fallback: var(--line-strong, rgba(0, 0, 0, 0.14));
+  --accent-fallback: var(--accent, #625bf3);
+}
+
+body {
+  overflow-y: auto !important;
+  height: auto !important;
+  min-height: 100dvh;
+}
+
+.satellite-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 24px 80px;
+  width: 100%;
+}
+
+.breadcrumb {
+  font-size: 0.875rem;
+  color: var(--muted-fallback);
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.breadcrumb a {
+  color: var(--muted-fallback);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: var(--accent-fallback);
+}
+
+.satellite-title {
+  font-size: clamp(2.1rem, 5.5vw, 2.9rem);
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+  margin-bottom: 20px;
+  color: var(--ink-body-fallback);
+}
+
+.satellite-lead {
+  font-size: 1.125rem;
+  color: var(--muted-fallback);
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.satellite-lead strong {
+  color: var(--ink-body-fallback);
+}
+
+.section-block {
+  margin-bottom: 40px;
+  text-align: left;
+}
+
+.section-block h2 {
+  font-size: 1.55rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  margin-top: 32px;
+  margin-bottom: 16px;
+  color: var(--ink-body-fallback);
+  border-bottom: 1px solid var(--line-fallback);
+  padding-bottom: 8px;
+}
+
+.section-block h3 {
+  font-size: 1.2rem;
+  font-weight: 650;
+  margin: 24px 0 12px;
+  color: var(--ink-body-fallback);
+}
+
+.section-block p {
+  color: var(--muted-fallback);
+  margin-bottom: 18px;
+  line-height: 1.7;
+}
+
+.section-block p strong {
+  color: var(--ink-body-fallback);
+}
+
+.section-block ul, .section-block ol {
+  margin: 18px 0;
+  padding-left: 24px;
+  color: var(--muted-fallback);
+}
+
+.section-block li {
+  margin-bottom: 8px;
+  line-height: 1.65;
+}
+
+.section-block li strong {
+  color: var(--ink-body-fallback);
+}
+
+/* Info Grid Cards */
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 18px;
+  margin: 24px 0;
+}
+
+.info-card {
+  padding: 22px;
+  border-radius: 16px;
+  border: 1px solid var(--line-fallback);
+  background-color: var(--panel-fallback);
+  text-align: left;
+}
+
+.info-card h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--ink-body-fallback);
+}
+
+.info-card p {
+  font-size: 0.9rem;
+  color: var(--muted-fallback);
+  margin: 0;
+  line-height: 1.55;
+}
+
+/* Tables */
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid var(--line-fallback);
+  background-color: var(--panel-fallback);
+  margin: 28px 0;
+}
+
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.925rem;
+  text-align: left;
+}
+
+.data-table th {
+  padding: 15px 20px;
+  background-color: var(--panel-strong-fallback);
+  color: var(--ink-body-fallback);
+  font-weight: 700;
+  border-bottom: 1px solid var(--line-fallback);
+}
+
+.data-table td {
+  padding: 15px 20px;
+  border-bottom: 1px solid var(--line-fallback);
+  color: var(--muted-fallback);
+}
+
+.data-table tr:last-child td {
+  border-bottom: 0;
+}
+
+.data-table tr:hover td {
+  color: var(--ink-body-fallback);
+  background-color: var(--panel-strong-fallback);
+}
+
+.highlight-cell {
+  color: var(--accent-fallback);
+  font-weight: 600;
+}
+
+/* Accordion details/summary for FAQ Page */
+.faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin: 28px 0;
+}
+
+.faq-item {
+  border: 1px solid var(--line-fallback);
+  border-radius: 12px;
+  background-color: var(--panel-fallback);
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+  text-align: left;
+}
+
+.faq-item[open] {
+  border-color: var(--line-strong-fallback);
+}
+
+.faq-item summary {
+  padding: 20px 24px;
+  font-weight: 650;
+  font-size: 1.05rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  list-style: none;
+  color: var(--ink-body-fallback);
+}
+
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-item summary::after {
+  content: "+";
+  font-size: 1.3rem;
+  color: var(--muted-fallback);
+  transition: transform 0.2s ease;
+}
+
+.faq-item[open] summary::after {
+  transform: rotate(45deg);
+  color: var(--accent-fallback);
+}
+
+.faq-item summary:hover {
+  background-color: var(--panel-strong-fallback);
+}
+
+.faq-content {
+  padding: 0 24px 22px;
+  font-size: 0.95rem;
+  color: var(--muted-fallback);
+  line-height: 1.65;
+}
+
+/* Back Link Button */
+.back-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 40px;
+  padding: 12px 24px;
+  background-color: var(--panel-fallback);
+  border: 1px solid var(--line-fallback);
+  border-radius: 9999px;
+  font-size: 0.925rem;
+  font-weight: 600;
+  color: var(--ink-body-fallback);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.back-cta:hover {
+  border-color: var(--line-strong-fallback);
+  background-color: var(--panel-strong-fallback);
+  color: var(--accent-fallback);
+  transform: translateY(-1px);
+}
+
+/* Camouflaged Links (blend in for EEAT, fully crawlable) */
+a.inline {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1.5px dashed var(--line-strong-fallback);
+  cursor: pointer;
+  transition: all 0.16s ease;
+}
+
+a.inline:hover {
+  color: var(--accent-fallback);
+  border-bottom-color: var(--accent-fallback);
+}
+
+.footer {
+  text-align: center !important;
+  display: block !important;
+  width: 100% !important;
+  margin: 40px auto 0 !important;
+  padding: 20px 0 !important;
+}
+
+  </style>
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://sell-nft.github.io/#website",
+      "url": "https://sell-nft.github.io/",
+      "name": "Sell NFT"
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://sell-nft.github.io/faq/#webpage",
+      "url": "https://sell-nft.github.io/faq/",
+      "name": "Sell NFT NFT FAQ Help Center",
+      "isPartOf": {
+        "@id": "https://sell-nft.github.io/#website"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": "https://sell-nft.github.io/faq/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://sell-nft.github.io/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Sell NFT NFT FAQ Help Center"
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://sell-nft.github.io/faq/#faqpage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is minting an NFT?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Minting writes a unique token ID to the blockchain ledger, pointing to metadata that represents the digital asset. Read more about <a class=\"inline\" href=\"https://en.wikipedia.org/wiki/Non-fungible_token\" target=\"_blank\" rel=\"noopener noreferrer\">NFT metadata definitions</a>."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do I retain custody of my listed NFTs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our non-custodial marketplace lets you list NFTs directly from your own wallet. The item is only transferred when a buyer meets your signed price parameters, conforming to the <a class=\"inline\" href=\"https://ethereum.org/en/developers/docs/standards/tokens/erc-1155/\" target=\"_blank\" rel=\"noopener noreferrer\">ERC-1155 standard</a>."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What fees are involved in trading NFTs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Trading NFTs involves network gas fees, protocol fees, and optional creator royalties. Sell NFT displays these fees transparently in checkout."
+          }
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="../" aria-label="Sell NFT">
+      <img src="../favicon.png" width="30" height="30" alt="">
+      <span>Sell NFT</span>
+    </a>
+    <nav class="nav" aria-label="Main Navigation">
+      <a href="../how-it-works/" >How it works</a>
+      <a href="../faq/" class="active">FAQ</a>
+      <a href="../about/" >About</a>
+      <a href="../security/" >Security</a>
+      <a href="../supported-chains/" >Supported Chains</a>
+    </nav>
+    <span class="spacer"></span>
+    <a class="open-app" href="../dashboard/" rel="noopener noreferrer">Open app</a>
+  </header>
+
+  <main class="satellite-container">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="../">Home</a> › <span>Sell NFT NFT FAQ Help Center</span>
+    </nav>
+
+    <h1 class="satellite-title">Sell NFT NFT FAQ Help Center</h1>
+    <p class="satellite-lead">Frequently asked questions regarding gas fees, minting, safety, and royalties.</p>
+
+    <div class="faq-list">
+      <details class="faq-item" id="faq-1">
+        <summary>What is minting an NFT?</summary>
+        <div class="faq-content">
+          <p>Minting writes a unique token ID to the blockchain ledger, pointing to metadata that represents the digital asset. Read more about <a class="inline" href="https://en.wikipedia.org/wiki/Non-fungible_token" target="_blank" rel="noopener noreferrer">NFT metadata definitions</a>.</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-2">
+        <summary>Do I retain custody of my listed NFTs?</summary>
+        <div class="faq-content">
+          <p>Yes. Our non-custodial marketplace lets you list NFTs directly from your own wallet. The item is only transferred when a buyer meets your signed price parameters, conforming to the <a class="inline" href="https://ethereum.org/en/developers/docs/standards/tokens/erc-1155/" target="_blank" rel="noopener noreferrer">ERC-1155 standard</a>.</p>
+        </div>
+      </details>
+      <details class="faq-item" id="faq-3">
+        <summary>What fees are involved in trading NFTs?</summary>
+        <div class="faq-content">
+          <p>Trading NFTs involves network gas fees, protocol fees, and optional creator royalties. Sell NFT displays these fees transparently in checkout.</p>
+        </div>
+      </details></div>
+
+    <div style="margin: 40px 0; display: flex; justify-content: flex-start;">
+      <a class="open-app" href="../dashboard/" style="max-width: 320px; display: inline-flex; justify-content: center; text-decoration: none; padding: 12px 24px; font-weight: 700;">Open Sell NFT Portal</a>
+    </div>
+
+    <a class="back-cta" href="../">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="16" height="16"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      Back to Portal
+    </a>
+  </main>
+</body>
+</html>

@@ -1,0 +1,55 @@
+# Sell NFT
+> An independent, non-custodial informational dashboard explaining how NFT listings, offers, fees, approvals, and blockchain settlement work.
+
+## What is Sell NFT
+Sell NFT means transferring an owned non-fungible token to a buyer in exchange for cryptocurrency or another agreed asset. The dashboard provides educational information without holding assets, requesting private keys, executing trades, or operating a marketplace. Unlike a marketplace, it supplies no order book or settlement contract; unlike a wallet, it cannot sign transactions; unlike an explorer, it interprets the selling process rather than only displaying blockchain records.
+
+## How it works
+First, identify the NFT by its blockchain, contract address, token ID, and collection authenticity. Choose a compatible marketplace and compare its liquidity, listing type, accepted currency, fees, royalties, and expiration terms. Connect the wallet that owns the NFT, approve only the verified marketplace contract if approval is required, then sign a fixed-price listing, auction order, or offer acceptance. Many listings are signed orders stored off-chain while the NFT remains in the seller’s wallet. When an eligible buyer fulfills the order, the marketplace contract transfers the NFT and payment, distributes applicable fees, and records settlement on-chain.
+
+## Key facts
+- The dashboard is informational and never takes custody, signs orders, or requests a recovery phrase.
+- ERC-721 represents individually identified NFTs; ERC-1155 supports multiple token types and quantities in one contract.
+- An EVM NFT is uniquely identified by its chain, contract address, and token ID.
+- Common EVM venues operate on Ethereum mainnet (chain ID 1), Polygon PoS (137), Arbitrum One (42161), and Base (8453).
+- Gas is paid in the network’s gas token; sale currencies may instead be native assets, wrapped assets, or supported ERC-20 tokens.
+- An operator approval permits a contract to transfer an NFT; a listing signature separately authorizes specific order terms.
+- ERC-2981 communicates royalty information but does not universally enforce royalty payment.
+- Blockchain settlement may confirm quickly, but finding a buyer has no guaranteed duration.
+
+## Common questions
+**Is selling an NFT safe?** It is permissionless, not automatically safe. Verify the domain, chain, NFT contract, marketplace contract, price, currency, recipient, and approval scope before signing.
+
+**Who holds my NFT while it is listed?** In a non-custodial listing, it normally remains in your wallet until settlement, although the approved marketplace contract may be authorized to transfer it.
+
+**What fees can apply?** Possible costs include gas, marketplace fees, creator earnings, and currency-conversion costs. Review net proceeds in the marketplace before signing.
+
+**How long does a sale take?** A listing can appear after its signature is indexed, but it sells only when a buyer or matching offer exists. On-chain completion then depends on network confirmation.
+
+**Which NFTs and chains are supported?** Support is venue-specific. Confirm the marketplace accepts the NFT’s exact chain, contract standard, collection, and requested payment asset.
+
+**How do I start?** Use the wallet holding the NFT, open a verified marketplace URL, locate the asset by contract and token ID, select sale terms, review approvals, and sign.
+
+**What are the main risks?** Phishing, malicious approvals, counterfeit collections, stale listings, pricing mistakes, illiquidity, contract vulnerabilities, volatile payment assets, and metadata disappearance are primary risks.
+
+## App
+- Dashboard: https://sell-nft.github.io/
+- App: https://sell-nft.github.io/dashboard/
+
+## Official resources
+Ethereum NFT guide: https://ethereum.org/nft/
+ERC-721 standard: https://eips.ethereum.org/EIPS/eip-721
+ERC-1155 standard: https://eips.ethereum.org/EIPS/eip-1155
+ERC-2981 royalty standard: https://eips.ethereum.org/EIPS/eip-2981
+OpenSea selling guide: https://support.opensea.io/en/articles/8867002-how-do-i-sell-an-nft
+OpenSea supported blockchains: https://support.opensea.io/en/articles/8867082-which-blockchains-are-compatible-with-opensea
+Seaport protocol documentation: https://docs.opensea.io/docs/seaport
+Seaport core source code: https://github.com/ProjectOpenSea/seaport-core
+MetaMask token-approval guide: https://support.metamask.io/stay-safe/safety-in-web3/what-is-a-token-approval
+
+## Data & references
+NIST NFT security report: https://www.nist.gov/news-events/news/2024/03/non-fungible-token-nft-security-nist-ir-8472-now-available
+DefiLlama NFT marketplace data: https://defillama.com/nfts/marketplaces
+CoinGecko NFT market data: https://www.coingecko.com/en/nft
+ChainList network identifiers: https://chainlist.org/
+Wikipedia NFT overview: https://en.wikipedia.org/wiki/Non-fungible_token

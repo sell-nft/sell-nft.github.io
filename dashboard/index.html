@@ -1,44 +1,64 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sell NFT Dashboard | Compare Offers &amp; Target Payouts</title>
+<meta name="description" content="Sell NFT with a clear view of your payout. Compare Blur, OpenSea and Rarible fees, calculate proceeds after royalties and gas, and choose how to sell.">
+<meta name="robots" content="noindex,follow">
+<meta name="theme-color" content="#faf9f7">
+<link rel="canonical" href="https://sell-nft.github.io/dashboard/">
+<link rel="icon" href="../favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="../apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Sell NFT Dashboard | Compare Offers &amp; Target Payouts">
+<meta property="og:description" content="Compare NFT selling fees in one place. See what you keep after marketplace fees, creator royalties and gas.">
+<meta property="og:url" content="https://sell-nft.github.io/dashboard/">
+<meta property="og:site_name" content="Sell NFT">
+<meta property="og:image" content="https://sell-nft.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sell NFT marketplace fee comparison: Blur 0%, OpenSea 1%, Rarible 2% on Ethereum">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sell NFT Dashboard | Compare Offers &amp; Target Payouts">
+<meta name="twitter:description" content="Compare marketplaces and calculate your NFT sale proceeds after fees, royalties and gas.">
+<meta name="twitter:url" content="https://sell-nft.github.io/dashboard/">
+<meta name="twitter:image" content="https://sell-nft.github.io/og.png">
+<meta name="twitter:image:alt" content="Sell NFT marketplace fee comparison on Ethereum">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/site.css">
 
-  <title>Dashboard</title>
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="apple-touch-icon" href="favicon.png">
-
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-    }
-
-    iframe {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      border: 0;
-      margin: 0;
-      padding: 0;
-      display: block;
-      z-index: 1;
-    }
-  </style>
 </head>
 <body>
-
-  <iframe
-    src="https://zerofi.pro/"
-    loading="eager"
-    fetchpriority="high"
-    allowfullscreen>
-  </iframe>
-
+<header class="ccaa718 c3128be"><div class="c5349f6">Sell NFT<span>.</span></div><span class="cd5d9ac"><img src="../assets/tokens/eth.svg" width="28" height="28" alt=""> Ethereum sale dashboard</span></header>
+<main class="ccaa718 c2b449e">
+<h1>Sell NFT dashboard</h1><p class="c886a28">Compare buyer offers after selling costs, then work back from the ETH you want to keep to find your asking price.</p>
+  <section class="c5015cd" id="fees" aria-labelledby="fees-title">
+    <div class="c69369e"><div><h2 id="fees-title">Compare NFT offers after fees</h2><p>Set a starting price and costs, then adjust each marketplace below to compare different offers for the same NFT.</p></div><span class="cf09f62">Sale price − selling costs = proceeds</span></div>
+    <form class="cedef1c" id="fee-form">
+      <div class="ce9822b"><label for="sale-price">Starting sale price</label><div class="cf8fe04"><input id="sale-price" name="sale-price" type="number" min="0.000001" max="1000000000" step="any" value="1" inputmode="decimal" required><span>ETH</span></div></div>
+      <div class="ce9822b"><label for="royalty">Starting royalty</label><div class="cf8fe04"><input id="royalty" name="royalty" type="number" min="0" max="98" step="any" value="2.5" inputmode="decimal" required><span>%</span></div><small>Use the rate for your collection.</small></div>
+      <div class="ce9822b"><label for="gas">Starting seller gas</label><div class="cf8fe04"><input id="gas" name="gas" type="number" min="0" max="1000000000" step="any" value="0" inputmode="decimal" required><span>ETH</span></div><small>Enter the gas cost from your wallet.</small></div>
+    </form>
+<div class="c37198a" aria-label="Individual marketplace costs"><fieldset><legend>Blur <span>0% platform fee</span></legend><div class="ce9822b"><label for="blur-offer">Offer price</label><div class="cf8fe04"><input id="blur-offer" data-offer="blur" type="number" value="1" min="0.000001" max="1000000000" step="any" inputmode="decimal" required><span>ETH</span></div></div><div class="ce9822b"><label for="blur-venue-royalty">Creator royalty</label><div class="cf8fe04"><input id="blur-venue-royalty" data-venue-royalty="blur" type="number" value="2.5" min="0" max="98" step="any" inputmode="decimal" required><span>%</span></div></div><div class="ce9822b"><label for="blur-venue-gas">Seller-paid gas</label><div class="cf8fe04"><input id="blur-venue-gas" data-venue-gas="blur" type="number" value="0" min="0" max="1000000000" step="any" inputmode="decimal" required><span>ETH</span></div></div></fieldset><fieldset><legend>OpenSea <span>1% platform fee</span></legend><div class="ce9822b"><label for="opensea-offer">Offer price</label><div class="cf8fe04"><input id="opensea-offer" data-offer="opensea" type="number" value="1" min="0.000001" max="1000000000" step="any" inputmode="decimal" required><span>ETH</span></div></div><div class="ce9822b"><label for="opensea-venue-royalty">Creator royalty</label><div class="cf8fe04"><input id="opensea-venue-royalty" data-venue-royalty="opensea" type="number" value="2.5" min="0" max="98" step="any" inputmode="decimal" required><span>%</span></div></div><div class="ce9822b"><label for="opensea-venue-gas">Seller-paid gas</label><div class="cf8fe04"><input id="opensea-venue-gas" data-venue-gas="opensea" type="number" value="0" min="0" max="1000000000" step="any" inputmode="decimal" required><span>ETH</span></div></div></fieldset><fieldset><legend>Rarible <span>2% platform fee</span></legend><div class="ce9822b"><label for="rarible-offer">Offer price</label><div class="cf8fe04"><input id="rarible-offer" data-offer="rarible" type="number" value="1" min="0.000001" max="1000000000" step="any" inputmode="decimal" required><span>ETH</span></div></div><div class="ce9822b"><label for="rarible-venue-royalty">Creator royalty</label><div class="cf8fe04"><input id="rarible-venue-royalty" data-venue-royalty="rarible" type="number" value="2.5" min="0" max="98" step="any" inputmode="decimal" required><span>%</span></div></div><div class="ce9822b"><label for="rarible-venue-gas">Seller-paid gas</label><div class="cf8fe04"><input id="rarible-venue-gas" data-venue-gas="rarible" type="number" value="0" min="0" max="1000000000" step="any" inputmode="decimal" required><span>ETH</span></div></div></fieldset></div>
+    <p class="ce5ff57" id="calc-error" role="alert" hidden></p>
+    <div class="cc9c175" tabindex="0" role="region" aria-label="NFT marketplace fee comparison table">
+      <table><caption>Seller proceeds in ETH · <span id="table-basis">Individual marketplace offers and selling costs</span></caption>
+        <thead><tr><th scope="col">Marketplace</th><th scope="col">Platform fee</th><th scope="col">Fee in ETH</th><th scope="col">Creator royalty</th><th scope="col">Seller gas</th><th scope="col">You receive</th></tr></thead>
+        <tbody><tr class="cc410f9" data-rate="0" data-venue="blur"><th scope="row">Blur</th><td>0%</td><td data-cell="fee">0.0000</td><td data-cell="royalty">0.0250</td><td data-cell="gas">0.0000</td><td data-cell="net">0.9750 ETH</td></tr>
+        <tr data-rate="1" data-venue="opensea"><th scope="row">OpenSea</th><td>1%</td><td data-cell="fee">0.0100</td><td data-cell="royalty">0.0250</td><td data-cell="gas">0.0000</td><td data-cell="net">0.9650 ETH</td></tr>
+        <tr data-rate="2" data-venue="rarible"><th scope="row">Rarible</th><td>2%</td><td data-cell="fee">0.0200</td><td data-cell="royalty">0.0250</td><td data-cell="gas">0.0000</td><td data-cell="net">0.9550 ETH</td></tr></tbody>
+      </table>
+    </div>
+    <div class="c37ec0d"><p id="calc-summary" aria-live="polite"><strong>0.0200 ETH separates the highest and lowest payout.</strong> Compare buyer offers as well as fees: a higher offer can cover a higher platform fee.</p></div>
+    <details class="c451667"><summary>Fee sources and calculation method</summary><p>Platform rates were checked on October 9, 2026 against Blur's marketplace homepage (0%), OpenSea Help Center's “What fees do I pay on OpenSea?” (standard secondary sales: 1%), and Rarible's September 1, 2026 FAQ (direct Ethereum listings: 2%). OpenSea private listings typically carry a 0% platform fee. Primary drops and purchases of aggregated listings use separate fee schedules.</p><p>Net proceeds = sale price * (1 - platform fee / 100 - creator royalty / 100) - seller-paid gas. Each row uses the offer price, royalty and gas entered for that marketplace. The highest net proceeds are highlighted. Results display at least four decimal places, with extra precision for small amounts.</p></details>
+  </section>
+<section class="ca60af1" aria-labelledby="target-title"><div><h2 id="target-title">Set your NFT target payout</h2><p>Use your chosen marketplace's royalty and gas entries above. The required asking price includes those costs and its platform fee.</p><p>Asking price = (target payout + seller gas) / (1 - platform fee / 100 - royalty / 100).</p></div><div><div class="c67945c"><div class="ce9822b"><label for="target-payout">I want to receive</label><div class="cf8fe04"><input id="target-payout" type="number" min="0.000001" max="1000000000" step="any" value="1" inputmode="decimal" required><span>ETH</span></div></div><div class="ce9822b"><label for="target-market">Marketplace</label><select id="target-market"><option value="blur">Blur</option><option value="opensea">OpenSea</option><option value="rarible">Rarible</option></select></div></div><div class="c50d4f8" aria-live="polite"><strong id="target-amount">1.02564103 ETH</strong><p id="target-explanation">Asking price to keep 1 ETH on Blur, including 2.5% royalty and 0 ETH seller gas. Rounded up to 8 decimal places.</p></div></div></section>
+<div class="cac75e7"><button class="c5167b7" type="button" id="save-comparison">Save comparison</button><button class="c5167b7 c9b1144" type="button" id="reset-comparison">Reset values</button><p id="save-status" role="status">Save your values in this browser to return to them later.</p></div>
+</main><footer class="ccaa718 c800a3d"><div class="c5349f6">Sell NFT<span>.</span></div><p>Marketplace fees, creator royalties and the ETH you keep.</p></footer>
+<script src="../assets/site.js" defer></script>
 </body>
 </html>

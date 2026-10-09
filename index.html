@@ -1,300 +1,120 @@
 <!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Sell NFT — Sell your NFT with confidence</title>
-  <meta name="description" content="Sell NFT refers to listing a non-fungible token on a marketplace or accepting an offer to transfer it to a buyer.">
-  <meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large,max-video-preview:-1">
-  <meta name="theme-color" content="#eef0f3">
-  <link rel="canonical" href="https://sell-nft.github.io/">
-  <link rel="icon" type="image/png" href="favicon.png">
-  <link rel="prefetch" href="dashboard/index.html">
-  <link rel="preconnect" href="https://defillama.com/" crossorigin>
-  <link rel="preconnect" href="https://coins.llama.fi" crossorigin>
-  <meta property="og:type" content="website"><meta property="og:url" content="https://sell-nft.github.io/">
-  <meta property="og:title" content="Sell NFT — Sell your NFT with confidence">
-  <meta property="og:description" content="Sell NFT refers to listing a non-fungible token on a marketplace or accepting an offer to transfer it to a buyer.">
-  <meta property="og:site_name" content="Sell NFT dashboard"><meta property="og:image" content="https://sell-nft.github.io/og-cover.png">
-  <meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="Sell NFT — Sell your NFT with confidence"><meta name="twitter:description" content="Sell NFT refers to listing a non-fungible token on a marketplace or accepting an offer to transfer it to a buyer."><meta name="twitter:image" content="https://sell-nft.github.io/og-cover.png">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@graph":[
-      {"@type":"WebSite","@id":"https://sell-nft.github.io/#website","url":"https://sell-nft.github.io/","name":"Sell NFT dashboard","inLanguage":"en-US"},
-      {"@type":"Thing","@id":"https://sell-nft.github.io/#brand","name":"Sell NFT",
-       "description":"Sell NFT refers to listing a non-fungible token on a marketplace or accepting an offer to transfer it to a buyer.",
-       "sameAs":["https://opensea.io/", "https://magiceden.io/", "https://rarible.com/", "https://looksrare.org/"]},
-      {"@type":"WebPage","@id":"https://sell-nft.github.io/#webpage","url":"https://sell-nft.github.io/","name":"Sell NFT \u2014 Sell your NFT with confidence","description":"Sell NFT refers to listing a non-fungible token on a marketplace or accepting an offer to transfer it to a buyer.","isPartOf":{"@id":"https://sell-nft.github.io/#website"},"about":{"@id":"https://sell-nft.github.io/#brand"},"mainEntity":{"@id":"https://sell-nft.github.io/#brand"},"inLanguage":"en-US","mentions":[{"@type":"Thing","name":"Ethereum","sameAs":"https://ethereum.org/what-is-ethereum/"},{"@type":"Thing","name":"ERC-721","sameAs":"https://eips.ethereum.org/EIPS/eip-721"}]},
-      {"@type":"ItemList","@id":"https://sell-nft.github.io/#resources","name":"Sell NFT \u2014 resources & references","itemListElement":[{"@type":"ListItem","position":1,"name":"Ethereum NFT Overview","url":"https://ethereum.org/nft/"},{"@type":"ListItem","position":2,"name":"ERC-721 Standard","url":"https://eips.ethereum.org/EIPS/eip-721"},{"@type":"ListItem","position":3,"name":"ERC-1155 Standard","url":"https://eips.ethereum.org/EIPS/eip-1155"},{"@type":"ListItem","position":4,"name":"Non-Fungible Tokens","url":"https://en.wikipedia.org/wiki/Non-fungible_token"},{"@type":"ListItem","position":5,"name":"CoinGecko NFT Rankings","url":"https://www.coingecko.com/en/nft"},{"@type":"ListItem","position":6,"name":"Marketplace Volume","url":"https://defillama.com/nfts/marketplaces"},{"@type":"ListItem","position":7,"name":"Volume by Chain","url":"https://defillama.com/nfts/chains"},{"@type":"ListItem","position":8,"name":"OpenSea Top Collections","url":"https://opensea.io/collections/top"},{"@type":"ListItem","position":9,"name":"Sell on OpenSea","url":"https://support.opensea.io/en/articles/8867002-how-do-i-sell-an-nft"},{"@type":"ListItem","position":10,"name":"Sell on Rarible","url":"https://help.rarible.com/hc/en-us/articles/15201508178957-How-to-sell-list-one-or-more-items"},{"@type":"ListItem","position":11,"name":"Sell on Magic Eden","url":"https://help.magiceden.io/en/articles/6006555-how-to-sell-solana-nfts-on-magic-eden"},{"@type":"ListItem","position":12,"name":"OpenSea Gas Fees","url":"https://support.opensea.io/en/articles/8867083-what-are-gas-fees"},{"@type":"ListItem","position":13,"name":"NFT Listing Scams","url":"https://support.metamask.io/stay-safe/protect-yourself/nfts/nft-listing-scams/"},{"@type":"ListItem","position":14,"name":"OpenSea NFT Safety","url":"https://support.opensea.io/en/articles/8867129-how-can-i-stay-safe-and-protect-my-nfts"},{"@type":"ListItem","position":15,"name":"Secure Your NFTs","url":"https://www.ledger.com/academy/how-to-secure-your-nfts"},{"@type":"ListItem","position":16,"name":"Revoke Token Approvals","url":"https://revoke.cash/learn/approvals/how-to-revoke-token-approvals"}]}
-    ]
-  }
-  </script>
-  <style>
-:root{
-  --bg:#eef0f3; --bg-2:#e7eaef; --panel:#ffffff; --field:#f1f3f7; --field-2:#e9edf2;
-  --ink:#151a21; --text:#414954; --muted:#6a727d; --faint:#9aa2ad;
-  --line:rgba(20,26,33,.09); --line-2:rgba(20,26,33,.14);
-  --accent:#2081E2; --accent-ink:#0b355e; --accent-soft:rgba(32,129,226,0.13); --accent-glow:rgba(32,129,226,0.3);
-  --cta:#171a20; --cta-hover:#0a0c10; --cta-ink:#ffffff;
-  --shadow-card:0 1px 0 rgba(20,26,33,.02), 0 40px 80px -42px rgba(24,32,48,.40), 0 14px 30px -22px rgba(24,32,48,.24);
-  --shadow-pop:0 24px 60px -26px rgba(24,32,48,.38), 0 8px 20px -12px rgba(24,32,48,.22);
-  --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, Consolas, monospace;
-  --font: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-  --ease: cubic-bezier(0.22, 0.7, 0.24, 1);
-  color-scheme: light;
-}
-html[data-theme="dark"]{
-  --bg:#0b0e13; --bg-2:#0e131b; --panel:#141a24; --field:#1b2230; --field-2:#232c3d;
-  --ink:#e9eef7; --text:#bcc5d6; --muted:#8b95a8; --faint:#606a7e;
-  --line:rgba(226,234,250,.10); --line-2:rgba(226,234,250,.18);
-  --accent:#5ea4ea; --accent-ink:#8fc0f0; --accent-soft:rgba(94,164,234,0.16); --accent-glow:rgba(94,164,234,0.34);
-  --cta:#5ea4ea; --cta-hover:#508dc9; --cta-ink:#12161c;
-  --shadow-card:0 30px 70px -34px rgba(0,0,0,.66), 0 6px 18px -10px rgba(0,0,0,.5);
-  --shadow-pop:0 24px 60px -26px rgba(0,0,0,.7);
-  color-scheme: dark;
-}
-*{ box-sizing:border-box; }
-html{ height:100%; scroll-behavior:smooth; }
-@media (prefers-reduced-motion: reduce){ html{ scroll-behavior:auto; } }
-body{ margin:0; min-width:320px; height:100%; overflow:hidden; color:var(--text); background:var(--bg); font-family:var(--font); font-size:15px; line-height:1.55; -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility; }
-a{ color:inherit; text-decoration:none; }
-button{ font:inherit; color:inherit; background:none; border:none; cursor:pointer; }
-img{ display:block; max-width:100%; }
-h1,h2,h3,p{ margin:0; }
-a:focus-visible, button:focus-visible, summary:focus-visible{ outline:2px solid var(--accent); outline-offset:3px; border-radius:10px; }
-.skip{ position:absolute; left:-999px; }
-.skip:focus{ left:12px; top:12px; z-index:120; padding:9px 15px; border-radius:10px; background:var(--cta); color:var(--cta-ink); font-weight:750; }
-.bg{ position:fixed; inset:0; z-index:0; pointer-events:none; overflow:hidden; background:
-  radial-gradient(1100px 700px at 82% 116%, var(--bg-2), transparent 60%),
-  radial-gradient(900px 620px at -6% -8%, var(--bg-2), transparent 58%); }
-.bg::before{ content:""; position:absolute; right:-14%; bottom:-30%; width:min(92vw,940px); aspect-ratio:1; border-radius:50%;
-  background:repeating-radial-gradient(circle at center, transparent 0 86px, var(--line) 86px 87px); opacity:.5; mask:radial-gradient(circle at center, #000 62%, transparent 72%); }
-.bg::after{ content:""; position:absolute; left:-10%; top:-16%; width:min(70vw,560px); aspect-ratio:1; border-radius:50%;
-  background:repeating-radial-gradient(circle at center, transparent 0 64px, var(--line) 64px 65px); opacity:.4; mask:radial-gradient(circle at center, #000 60%, transparent 72%); }
-.topbar{ position:relative; z-index:70; flex:0 0 auto; display:flex; align-items:center; justify-content:space-between; gap:14px; padding:13px clamp(16px,3.4vw,34px);
-  background:color-mix(in srgb, var(--bg) 78%, transparent); backdrop-filter:saturate(140%) blur(12px); -webkit-backdrop-filter:saturate(140%) blur(12px); border-bottom:1px solid var(--line); }
-.tb-left{ display:flex; align-items:center; gap:12px; min-width:0; }
-.hamb{ display:grid; place-items:center; width:40px; height:40px; flex:0 0 auto; position:relative; border:1px solid var(--line-2); border-radius:12px; background:var(--panel); color:var(--ink); transition:border-color .15s var(--ease); }
-.hamb:hover{ border-color:var(--accent); }
-.hamb .bar{ position:absolute; left:11px; right:11px; height:2px; border-radius:2px; background:currentColor; transition:transform .24s var(--ease), opacity .18s var(--ease); }
-.hamb .bar:nth-child(1){ top:14px; } .hamb .bar:nth-child(2){ top:19px; } .hamb .bar:nth-child(3){ top:24px; }
-body.drawer-open .hamb .bar:nth-child(1){ transform:translateY(5px) rotate(45deg); }
-body.drawer-open .hamb .bar:nth-child(2){ opacity:0; }
-body.drawer-open .hamb .bar:nth-child(3){ transform:translateY(-5px) rotate(-45deg); }
-.brand{ display:flex; align-items:center; gap:11px; min-width:0; }
-.brand-logo{ width:34px; height:34px; flex:0 0 auto; display:grid; place-items:center; border-radius:10px; background:var(--panel); box-shadow:inset 0 0 0 1px var(--line-2); }
-.brand-logo img{ width:22px; height:22px; border-radius:50%; }
-.brand-name{ font-size:19px; font-weight:820; letter-spacing:-0.03em; color:var(--ink); line-height:1.1; white-space:nowrap; }
-.tb-right{ display:flex; align-items:center; gap:9px; }
-.theme-toggle{ display:inline-flex; align-items:center; gap:2px; padding:3px; border-radius:999px; background:var(--field); box-shadow:inset 0 0 0 1px var(--line); }
-.theme-toggle button{ display:grid; place-items:center; width:30px; height:30px; border-radius:999px; color:var(--muted); transition:color .15s var(--ease), background-color .15s var(--ease); }
-.theme-toggle button svg{ width:15px; height:15px; }
-.theme-toggle button[aria-pressed="true"]{ color:var(--ink); background:var(--panel); box-shadow:0 2px 8px -3px rgba(0,0,0,.28); }
-.btn-app{ display:inline-flex; align-items:center; gap:8px; padding:9px 15px; border-radius:11px; background:var(--panel); color:var(--ink); font-size:13.5px; font-weight:700; letter-spacing:-0.01em; box-shadow:inset 0 0 0 1px var(--line-2); transition:box-shadow .15s var(--ease), transform .15s var(--ease); white-space:nowrap; }
-.btn-app svg{ width:16px; height:16px; color:var(--muted); }
-.btn-app:hover{ box-shadow:inset 0 0 0 1px var(--accent); transform:translateY(-1px); }
-.btn-app:hover svg{ color:var(--accent-ink); }
-.scrim{ position:fixed; inset:0; z-index:80; background:rgba(10,14,17,.42); opacity:0; visibility:hidden; transition:opacity .28s var(--ease), visibility .28s var(--ease); }
-body.drawer-open .scrim{ opacity:1; visibility:visible; }
-.drawer{ position:fixed; z-index:90; top:0; left:0; height:100dvh; width:300px; max-width:86vw; display:flex; flex-direction:column; padding:16px 14px 16px; background:var(--panel); border-right:1px solid var(--line); box-shadow:var(--shadow-pop);
-  transform:translateX(-104%); transition:transform .3s var(--ease); overflow-y:auto; }
-body.drawer-open .drawer{ transform:translateX(0); }
-.drawer-head{ display:flex; align-items:center; justify-content:space-between; gap:10px; padding:2px 6px 8px; }
-.drawer-head .brand-name{ font-size:15px; }
-.drawer-close{ display:grid; place-items:center; width:34px; height:34px; border-radius:10px; color:var(--muted); }
-.drawer-close:hover{ color:var(--ink); background:var(--field); }
-.drawer-close svg{ width:17px; height:17px; }
-.nav-label{ margin:15px 12px 6px; font-size:10px; font-weight:750; letter-spacing:0.15em; text-transform:uppercase; color:var(--faint); }
-.nav-item{ display:flex; align-items:center; gap:12px; padding:9px 12px; border-radius:10px; color:var(--text); font-size:14px; font-weight:650; transition:color .15s var(--ease), background-color .15s var(--ease); }
-.nav-item .ni-ico{ width:18px; height:18px; flex:0 0 auto; color:var(--muted); }
-.nav-item.is-active{ color:var(--accent-ink); background:var(--accent-soft); }
-.nav-item.is-active .ni-ico{ color:var(--accent-ink); }
-.nav-item:hover{ color:var(--ink); background:var(--field); }
-.nav-group{ border-radius:10px; }
-.nav-group summary{ display:flex; align-items:center; gap:12px; padding:9px 12px; border-radius:10px; color:var(--text); font-size:14px; font-weight:650; cursor:pointer; list-style:none; transition:color .15s var(--ease), background-color .15s var(--ease); }
-.nav-group summary::-webkit-details-marker{ display:none; }
-.nav-group summary .ni-ico{ width:18px; height:18px; flex:0 0 auto; color:var(--muted); }
-.nav-group summary .chev{ width:15px; height:15px; margin-left:auto; color:var(--faint); transition:transform .2s var(--ease); }
-.nav-group summary:hover{ color:var(--ink); background:var(--field); }
-.nav-group[open] summary{ color:var(--ink); }
-.nav-group[open] summary .chev{ transform:rotate(180deg); }
-.nav-sub{ display:flex; flex-direction:column; gap:1px; padding:2px 0 8px 42px; }
-.nav-sub a{ display:flex; align-items:baseline; gap:7px; padding:6px 10px; border-radius:8px; color:var(--muted); font-size:12.5px; font-weight:550; transition:color .15s var(--ease), background-color .15s var(--ease); }
-.nav-sub a small{ color:var(--faint); font-size:10.5px; font-weight:500; }
-.nav-sub a:hover{ color:var(--accent-ink); background:var(--field); }
-.drawer-foot{ margin-top:auto; padding-top:13px; border-top:1px solid var(--line); }
-.disclose{ margin:8px 8px 0; font-size:11px; line-height:1.5; color:var(--muted); }
-.disclose strong{ color:var(--text); font-weight:750; }
-.fine{ margin:6px 8px 0; font-size:10.5px; line-height:1.45; color:var(--faint); }
-.app{ height:100dvh; display:flex; flex-direction:column; overflow:hidden; position:relative; z-index:1; }
-.wrap{ flex:1 1 auto; min-height:0; display:grid; place-items:center; overflow:hidden; }
-.stage{ width:100%; max-width:560px; max-height:100%; margin-inline:auto; padding:clamp(14px,3vh,36px) clamp(16px,3.4vw,26px); display:flex; flex-direction:column; align-items:center; text-align:center; }
-.lead{ margin:0 0 clamp(13px,2.2vh,20px); max-width:24ch; font-size:clamp(19px,2.5vw,27px); line-height:1.16; letter-spacing:-0.025em; font-weight:750; color:var(--ink); }
-.lead .hl{ color:var(--accent-ink); }
-.hero-chips{ display:flex; flex-wrap:wrap; justify-content:center; gap:9px; margin-top:clamp(13px,2.2vh,18px); }
-.hchip{ display:inline-flex; align-items:baseline; gap:7px; padding:8px 13px; border-radius:12px; background:var(--panel); box-shadow:inset 0 0 0 1px var(--line); font-size:12px; font-weight:600; color:var(--muted); transition:box-shadow .15s var(--ease), color .15s var(--ease); }
-.hchip b{ color:var(--ink); font-family:var(--mono); font-size:12.5px; font-weight:650; font-variant-numeric:tabular-nums; }
-.hchip .ext{ color:var(--faint); font-size:10px; }
-a.hchip:hover{ box-shadow:inset 0 0 0 1px var(--accent); color:var(--text); }
-a.hchip:hover .ext{ color:var(--accent-ink); }
-.swap-card{ position:relative; width:min(480px,100%); border-radius:28px; background:var(--panel); padding:clamp(20px,4vw,30px); text-align:left; box-shadow:var(--shadow-card); }
-.card-head{ display:flex; align-items:center; justify-content:space-between; margin:2px 4px 17px; }
-.card-title{ font-size:15px; font-weight:800; letter-spacing:-0.02em; color:var(--ink); }
-.badge{ display:inline-flex; align-items:center; gap:6px; padding:5px 11px; border-radius:999px; color:var(--accent-ink); background:var(--accent-soft); font-size:10px; font-weight:750; letter-spacing:0.07em; text-transform:uppercase; }
-.badge i{ width:6px; height:6px; border-radius:50%; background:var(--accent); }
-.field{ position:relative; padding:17px 18px 18px; border-radius:19px; background:var(--field); }
-.field + .field{ margin-top:6px; }
-.field-top{ display:flex; align-items:center; justify-content:space-between; }
-.field-label{ font-size:12px; font-weight:600; color:var(--muted); }
-.field-bal{ font-size:11px; font-weight:600; color:var(--faint); }
-.field-row{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-top:11px; min-width:0; }
-.amount{ min-width:0; }
-.amount b{ display:block; font-size:clamp(29px,5vw,38px); font-weight:750; line-height:1; letter-spacing:-0.02em; color:var(--ink); font-variant-numeric:tabular-nums; }
-.amount span{ display:block; margin-top:6px; font-size:11px; font-weight:600; color:var(--faint); }
-.token-pill{ display:inline-flex; align-items:center; gap:10px; flex:0 0 auto; padding:7px 12px 7px 8px; border-radius:999px; background:var(--panel); box-shadow:0 4px 14px -8px rgba(0,0,0,.4), inset 0 0 0 1px var(--line); transition:box-shadow .15s var(--ease); }
-.token-pill:hover{ box-shadow:0 6px 18px -8px rgba(0,0,0,.42), inset 0 0 0 1px var(--line-2); }
-.token-pill img{ width:26px; height:26px; flex:0 0 auto; border-radius:50%; }
-.token-meta{ display:flex; flex-direction:column; line-height:1.05; min-width:0; }
-.token-meta small{ font-size:9.5px; font-weight:600; letter-spacing:0.06em; text-transform:uppercase; color:var(--faint); }
-.token-meta b{ font-size:15px; font-weight:800; letter-spacing:-0.01em; color:var(--ink); white-space:nowrap; }
-.token-pill .chev{ width:14px; height:14px; flex:0 0 auto; color:var(--faint); }
-.reverse{ position:relative; z-index:2; display:grid; place-items:center; width:40px; height:40px; margin:-14px auto; border:4px solid var(--panel); border-radius:13px; background:var(--field-2); color:var(--muted); box-shadow:0 6px 16px -8px rgba(0,0,0,.4); transition:transform .28s var(--ease), color .15s var(--ease), background-color .15s var(--ease); }
-.reverse svg{ width:16px; height:16px; }
-.reverse:hover{ color:var(--cta-ink); background:var(--accent); transform:rotate(180deg); }
-.details-btn{ display:flex; align-items:center; justify-content:center; gap:8px; width:100%; margin-top:12px; padding:12px; border-radius:14px; background:var(--field); color:var(--muted); font-size:12px; font-weight:750; letter-spacing:0.06em; text-transform:uppercase; transition:color .15s var(--ease), background-color .15s var(--ease); }
-.details-btn svg{ width:14px; height:14px; transition:transform .2s var(--ease); }
-.details-btn:hover{ color:var(--ink); }
-.details-btn[aria-expanded="true"] svg{ transform:rotate(180deg); }
-.details{ overflow:hidden; max-height:0; opacity:0; transition:max-height .3s var(--ease), opacity .22s var(--ease), margin .3s var(--ease); }
-.details.open{ max-height:280px; opacity:1; margin-top:6px; }
-.d-row{ display:flex; align-items:center; justify-content:space-between; gap:12px; padding:11px 8px; border-bottom:1px solid var(--line); }
-.d-row:last-child{ border-bottom:0; }
-.d-row span{ font-size:12.5px; font-weight:600; color:var(--muted); }
-.d-row b{ font-size:12.5px; font-weight:700; color:var(--text); }
-.d-row b.ok{ color:var(--accent-ink); }
-.d-row b.mono{ font-family:var(--mono); font-size:11px; }
-.cta{ display:flex; align-items:center; justify-content:center; gap:8px; margin-top:12px; padding:16px; border-radius:16px; background:var(--cta); color:var(--cta-ink); font-size:15px; font-weight:800; letter-spacing:0.03em; text-transform:uppercase; box-shadow:0 16px 34px -16px rgba(0,0,0,.5); transition:background-color .15s var(--ease), transform .15s var(--ease); }
-.cta svg{ width:16px; height:16px; }
-.cta:hover{ background:var(--cta-hover); transform:translateY(-1px); }
-.card-note{ margin:13px 4px 0; font-size:11px; line-height:1.5; color:var(--faint); text-align:center; }
-.card-note a{ color:var(--muted); text-decoration:underline; text-decoration-color:var(--line-2); text-underline-offset:2px; }
-.card-note a:hover{ color:var(--accent-ink); }
-@media (max-width:560px){
-  .brand-name{ font-size:16px; } .btn-app span{ display:none; } .btn-app{ padding:9px 11px; }
-  .stage{ padding:12px 16px; }
-  .lead{ font-size:clamp(18px,5.5vw,24px); margin-bottom:14px; }
-  .swap-card{ padding:18px; } .field{ padding:14px 15px 15px; } .amount b{ font-size:29px; }
-  .hero-chips{ margin-top:12px; }
-}
-@media (max-height:700px){ .lead{ font-size:clamp(17px,4.5vw,21px); margin-bottom:10px; } .hero-chips{ display:none; } }
-@media (max-height:600px){ .field{ padding:12px 15px 13px; } .amount b{ font-size:26px; } .details-btn{ margin-top:8px; padding:9px; } .cta{ padding:14px; margin-top:8px; } }
-@media (prefers-reduced-motion: reduce){ *{ transition:none !important; } }
-.stage.is-hero{ max-width:780px; }
-.hero{ display:flex; flex-direction:column; align-items:center; text-align:center; }
-.hero-h2{ margin:0; max-width:17ch; font-size:clamp(31px,5.8vw,56px); line-height:1.04; letter-spacing:-0.035em; font-weight:830; color:var(--ink); }
-.hero-h2 .hl{ color:var(--accent-ink); }
-.hero-sub{ margin:clamp(16px,2.8vh,23px) auto 0; max-width:54ch; font-size:clamp(15px,1.65vw,18px); line-height:1.58; color:var(--muted); font-weight:450; }
-.hero-cta{ display:flex; flex-wrap:wrap; align-items:center; justify-content:center; gap:12px; margin-top:clamp(22px,3.6vh,32px); }
-.hero-cta .cta{ margin-top:0; text-transform:none; letter-spacing:0.005em; padding:15px 26px; font-size:15px; border-radius:14px; }
-.hero-cta .cta-ghost{ background:var(--panel); color:var(--ink); box-shadow:inset 0 0 0 1px var(--line-2); }
-.hero-cta .cta-ghost:hover{ background:var(--field); box-shadow:inset 0 0 0 1px var(--accent); transform:translateY(-1px); }
-@media (max-width:560px){ .hero-cta{ flex-direction:column; width:100%; max-width:340px; } .hero-cta .cta{ width:100%; } }
-@media (max-height:640px){ .hero-sub{ font-size:14px; margin-top:12px; } .hero-chips{ display:none; } }
-  </style>
-  <script>document.documentElement.classList.add('js')</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sell NFT — Compare Marketplace Fees &amp; Keep More ETH</title>
+<meta name="description" content="Sell NFT with a clear view of your payout. Compare Blur, OpenSea and Rarible fees, calculate proceeds after royalties and gas, and choose how to sell.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta name="theme-color" content="#faf9f7">
+<link rel="canonical" href="https://sell-nft.github.io/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+<meta property="og:title" content="Sell NFT — Compare Marketplace Fees &amp; Keep More ETH">
+<meta property="og:description" content="Compare NFT selling fees in one place. See what you keep after marketplace fees, creator royalties and gas.">
+<meta property="og:url" content="https://sell-nft.github.io/">
+<meta property="og:site_name" content="Sell NFT">
+<meta property="og:image" content="https://sell-nft.github.io/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sell NFT marketplace fee comparison: Blur 0%, OpenSea 1%, Rarible 2% on Ethereum">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Sell NFT — Compare Marketplace Fees &amp; Keep More ETH">
+<meta name="twitter:description" content="Compare marketplaces and calculate your NFT sale proceeds after fees, royalties and gas.">
+<meta name="twitter:url" content="https://sell-nft.github.io/">
+<meta name="twitter:image" content="https://sell-nft.github.io/og.png">
+<meta name="twitter:image:alt" content="Sell NFT marketplace fee comparison on Ethereum">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+<script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "WebSite", "@id": "https://sell-nft.github.io/#website", "url": "https://sell-nft.github.io/", "name": "Sell NFT", "inLanguage": "en"}, {"@type": "WebPage", "@id": "https://sell-nft.github.io/#webpage", "url": "https://sell-nft.github.io/", "name": "Sell NFT — Compare Marketplace Fees & Keep More ETH", "description": "Compare NFT marketplace selling fees and calculate proceeds after creator royalties and seller-paid gas.", "isPartOf": {"@id": "https://sell-nft.github.io/#website"}, "inLanguage": "en", "breadcrumb": {"@id": "https://sell-nft.github.io/#breadcrumb"}, "mainEntity": {"@id": "https://sell-nft.github.io/#application"}, "hasPart": {"@id": "https://sell-nft.github.io/#faq"}, "primaryImageOfPage": {"@type": "ImageObject", "url": "https://sell-nft.github.io/og.png", "width": 1200, "height": 630}}, {"@type": "SoftwareApplication", "@id": "https://sell-nft.github.io/#application", "name": "NFT Sale Fee Calculator", "url": "https://sell-nft.github.io/", "applicationCategory": "FinanceApplication", "operatingSystem": "Any", "browserRequirements": "JavaScript-enabled web browser", "isAccessibleForFree": true, "featureList": ["Compare Ethereum NFT marketplace fees", "Calculate net sale proceeds", "Calculate an asking price from a target payout"], "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}}, {"@type": "BreadcrumbList", "@id": "https://sell-nft.github.io/#breadcrumb", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "Sell NFT", "item": "https://sell-nft.github.io/"}]}, {"@type": "FAQPage", "@id": "https://sell-nft.github.io/#faq", "url": "https://sell-nft.github.io/#faq", "name": "Sell NFT FAQ", "isPartOf": {"@id": "https://sell-nft.github.io/#webpage"}, "inLanguage": "en", "mainEntity": [{"@type": "Question", "name": "Where is the cheapest place to sell an NFT?", "acceptedAnswer": {"@type": "Answer", "text": "For the Ethereum marketplace fees compared here, Blur charges 0%, OpenSea normally charges 1%, and Rarible charges 2% on direct listings. Compare the final proceeds after collection royalties and gas. The highest available buyer offer can matter more than the lowest fee."}}, {"@type": "Question", "name": "Can I sell an NFT without paying gas upfront?", "acceptedAnswer": {"@type": "Answer", "text": "An off-chain listing signature can be free after the required token approval is in place. Initial approvals, accepting offers and on-chain cancellations can cost gas. On OpenSea, the buyer pays transaction gas when purchasing a fixed-price listing; the seller pays gas when accepting an offer."}}, {"@type": "Question", "name": "How do I choose a price for my NFT?", "acceptedAnswer": {"@type": "Answer", "text": "Start with recent completed sales for the same collection and similar traits. Compare the current floor and funded offers, then calculate the price needed to meet your target payout after fees. For a faster sale, evaluate bids already available for your token."}}, {"@type": "Question", "name": "How long does it take to sell an NFT?", "acceptedAnswer": {"@type": "Answer", "text": "A fixed-price listing waits for a buyer, which can take minutes, days or longer. Accepting a valid funded offer moves directly to the transaction stage. Settlement then depends on network confirmation, while an auction also includes its bidding period."}}, {"@type": "Question", "name": "What is the difference between platform fees and royalties?", "acceptedAnswer": {"@type": "Answer", "text": "A platform fee pays the marketplace for the sale. A creator royalty directs part of the sale price to the collection's creator. Each is calculated separately from the price. Network gas pays for blockchain transactions and is an additional cost."}}, {"@type": "Question", "name": "Do I receive ETH or WETH when my NFT sells?", "acceptedAnswer": {"@type": "Answer", "text": "The listing or offer specifies the payment token. An ETH-denominated fixed-price purchase pays in ETH, while Ethereum offers often use WETH, the wrapped form of ETH. Check the token before accepting. Unwrapping WETH to ETH is a separate transaction with a gas cost."}}, {"@type": "Question", "name": "Can I sell the same NFT on several marketplaces?", "acceptedAnswer": {"@type": "Answer", "text": "You can create listings on multiple compatible marketplaces while holding the NFT. Once it sells, review and cancel any remaining active orders. An unexpired signed order may become fillable again if the NFT returns to your wallet and its approval remains active."}}]}]}</script>
 </head>
 <body>
-  <a class="skip" href="#route-preview">Skip to preview</a>
-  <div class="bg" aria-hidden="true"></div>
-
-  <div class="app">
-  <header class="topbar">
-    <div class="tb-left">
-      <button class="hamb" type="button" id="hamb" aria-label="Open navigation" aria-controls="drawer" aria-expanded="false"><span class="bar"></span><span class="bar"></span><span class="bar"></span></button>
-      <div class="brand"><span class="brand-logo"><img src="favicon.png" width="22" height="22" alt="Sell NFT logo"></span><h1 class="brand-name">Sell NFT</h1></div>
+<header class="ccaa718 c3128be">
+  <div class="c5349f6">Sell NFT<span>.</span></div>
+  <nav aria-label="Page sections"><button type="button" data-section="marketplaces">Marketplaces</button><button type="button" data-section="fees">Fee calculator</button><button type="button" data-section="faq">FAQ</button></nav>
+  <a class="c5167b7 c66eab4" href="dashboard/">Open dashboard <span class="c522c8a" aria-hidden="true">↗</span></a>
+</header>
+<main class="ccaa718">
+  <section class="cd7187c" aria-labelledby="hero-title">
+    <div>
+      <h1 id="hero-title">Sell NFT</h1>
+      <p class="c886a28"><strong>Sell NFT by listing at a fixed price or accepting a buyer's offer, then keep the sale proceeds after marketplace fees, royalties and gas.</strong> Compare the costs before you choose where to sell.</p>
+      <div class="c24f766"><a class="c5167b7" href="dashboard/">Compare my sale <span class="c522c8a" aria-hidden="true">↗</span></a><span class="c8275ac">Three marketplaces.<br>One clear fee breakdown.</span></div>
     </div>
-    <div class="tb-right">
-      <div class="theme-toggle" role="group" aria-label="Color theme">
-        <button type="button" id="theme-light" aria-pressed="true" aria-label="Light theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.4M12 19.6V22M2 12h2.4M19.6 12H22M4.9 4.9l1.7 1.7M17.4 17.4l1.7 1.7M19.1 4.9l-1.7 1.7M6.6 17.4l-1.7 1.7"/></svg></button>
-        <button type="button" id="theme-dark" aria-pressed="false" aria-label="Dark theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a6.5 6.5 0 1 0 10.5 10.5z"/></svg></button>
-      </div>
-      <a class="btn-app" href="dashboard/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="6" width="18" height="12" rx="3"/><path d="M16 11h2"/></svg><span>Open app</span></a>
+    <a class="c489214" href="dashboard/" aria-label="Compare your NFT sale in the dashboard">
+      <div class="cbeccd8"><span>Your sale, after fees</span><span class="cd5d9ac"><img src="assets/tokens/eth.svg" width="28" height="28" alt=""> Ethereum</span></div>
+      <span class="cdf6ffc">You keep on a 1 ETH sale with Blur</span>
+      <span class="c516c55">0.975 <small>ETH</small></span>
+      <span class="c4b1f5d">After 2.5% creator royalties, before gas</span>
+      <dl><div><dt>Sale price</dt><dd>1.000 ETH</dd></div><div><dt>Marketplace fee · 0%</dt><dd>0.000 ETH</dd></div><div><dt>Creator royalty · 2.5%</dt><dd>0.025 ETH</dd></div></dl>
+      <span class="c86020b">Work out your take-home <span class="c522c8a" aria-hidden="true">↗</span></span>
+    </a>
+  </section>
+  <section class="c8fd74b" id="marketplaces" aria-labelledby="marketplaces-title">
+    <div class="c711959"><div><h2 id="marketplaces-title">Where should you sell your NFT?</h2><p>Start with the platform fee. Then compare the offers for your collection.</p></div><span class="cd5d9ac"><img src="assets/tokens/eth.svg" alt="" width="28" height="28"> Ethereum</span></div>
+    <div class="cee41d9">
+      <a class="c1419e8 cee53de" href="dashboard/" aria-label="Compare Blur NFT selling fees in the dashboard">
+        <div class="c3d4480"><h3>Blur</h3><span class="cc915ec">Lowest platform fee</span></div><p class="c9b2e4e">For collection bids and active trading</p>
+        <div class="c0afcc7">0<small>%</small></div><span class="c7361ac">marketplace selling fee</span>
+        <dl><div><dt>Sale approach</dt><dd>List or accept a bid</dd></div><div><dt>Creator royalties</dt><dd>Check collection terms</dd></div><div><dt>From 1 ETH, before royalty &amp; gas</dt><dd>1.000 ETH</dd></div></dl>
+        <span class="cdc1f1e">Compare Blur proceeds <span class="c522c8a" aria-hidden="true">↗</span></span>
+      </a>
+      <a class="c1419e8" href="dashboard/" aria-label="Compare OpenSea NFT selling fees in the dashboard">
+        <div class="c3d4480"><h3>OpenSea</h3></div><p class="c9b2e4e">For fixed-price listings and offers</p>
+        <div class="c0afcc7">1<small>%</small></div><span class="c7361ac">standard marketplace selling fee</span>
+        <dl><div><dt>Sale approach</dt><dd>List or accept an offer</dd></div><div><dt>Creator royalties</dt><dd>Collection-dependent</dd></div><div><dt>From 1 ETH, before royalty &amp; gas</dt><dd>0.990 ETH</dd></div></dl>
+        <span class="cdc1f1e">Compare OpenSea proceeds <span class="c522c8a" aria-hidden="true">↗</span></span>
+      </a>
+      <a class="c1419e8" href="dashboard/" aria-label="Compare Rarible NFT selling fees in the dashboard">
+        <div class="c3d4480"><h3>Rarible</h3></div><p class="c9b2e4e">For digital art and collectibles</p>
+        <div class="c0afcc7">2<small>%</small></div><span class="c7361ac">Ethereum marketplace selling fee</span>
+        <dl><div><dt>Sale approach</dt><dd>List or accept an offer</dd></div><div><dt>Creator royalties</dt><dd>Set by the collection</dd></div><div><dt>From 1 ETH, before royalty &amp; gas</dt><dd>0.980 ETH</dd></div></dl>
+        <span class="cdc1f1e">Compare Rarible proceeds <span class="c522c8a" aria-hidden="true">↗</span></span>
+      </a>
     </div>
-  </header>
-
-  <div class="scrim" id="scrim" tabindex="-1"></div>
-  <aside class="drawer" id="drawer" aria-label="Primary" aria-hidden="true">
-    <div class="drawer-head">
-      <div class="brand"><span class="brand-logo"><img src="favicon.png" width="22" height="22" alt=""></span><span class="brand-name">Sell NFT</span></div>
-      <button class="drawer-close" type="button" id="drawer-close" aria-label="Close navigation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <div class="cb57135"><span>Direct secondary sales on Ethereum. Creator royalties and network gas are separate.</span><span>Fee review: October 9, 2026</span></div>
+  </section>
+  <section class="c5015cd" id="fees" aria-labelledby="fees-title">
+    <div class="c69369e"><div><h2 id="fees-title">What will your NFT sale actually pay?</h2><p>Enter your sale price and selling costs. The table subtracts each marketplace's fee, your creator royalty and the gas you pay.</p></div><span class="cf09f62">Sale price − selling costs = proceeds</span></div>
+    <form class="cedef1c" id="fee-form">
+      <div class="ce9822b"><label for="sale-price">NFT sale price</label><div class="cf8fe04"><input id="sale-price" name="sale-price" type="number" min="0.000001" max="1000000000" step="any" value="1" inputmode="decimal" required><span>ETH</span></div></div>
+      <div class="ce9822b"><label for="royalty">Creator royalty</label><div class="cf8fe04"><input id="royalty" name="royalty" type="number" min="0" max="98" step="any" value="2.5" inputmode="decimal" required><span>%</span></div><small>Use the rate for your collection.</small></div>
+      <div class="ce9822b"><label for="gas">Seller-paid gas</label><div class="cf8fe04"><input id="gas" name="gas" type="number" min="0" max="1000000000" step="any" value="0" inputmode="decimal" required><span>ETH</span></div><small>Enter the gas cost from your wallet.</small></div>
+    </form>
+    <p class="ce5ff57" id="calc-error" role="alert" hidden></p>
+    <div class="cc9c175" tabindex="0" role="region" aria-label="NFT marketplace fee comparison table">
+      <table><caption>Seller proceeds in ETH · <span id="table-basis">1 ETH sale · 2.5% royalty · 0 ETH seller gas</span></caption>
+        <thead><tr><th scope="col">Marketplace</th><th scope="col">Platform fee</th><th scope="col">Fee in ETH</th><th scope="col">Creator royalty</th><th scope="col">Seller gas</th><th scope="col">You receive</th></tr></thead>
+        <tbody><tr class="cc410f9" data-rate="0"><th scope="row">Blur</th><td>0%</td><td data-cell="fee">0.0000</td><td data-cell="royalty">0.0250</td><td data-cell="gas">0.0000</td><td data-cell="net">0.9750 ETH</td></tr>
+        <tr data-rate="1"><th scope="row">OpenSea</th><td>1%</td><td data-cell="fee">0.0100</td><td data-cell="royalty">0.0250</td><td data-cell="gas">0.0000</td><td data-cell="net">0.9650 ETH</td></tr>
+        <tr data-rate="2"><th scope="row">Rarible</th><td>2%</td><td data-cell="fee">0.0200</td><td data-cell="royalty">0.0250</td><td data-cell="gas">0.0000</td><td data-cell="net">0.9550 ETH</td></tr></tbody>
+      </table>
     </div>
-    <nav aria-label="Sections">
-      <p class="nav-label">Bridge</p>
-      <a class="nav-item is-active" href="#route-preview" aria-current="page"><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M7 10h11l-3-3M17 14H6l3 3"/></svg>Route preview</a>
-      <p class="nav-label">Understand</p>
-      <details class="nav-group" open><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>NFT essentials<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://ethereum.org/nft/" target="_blank" rel="noopener noreferrer">Ethereum NFT Overview <small>NFT ownership and uses</small></a><a href="https://eips.ethereum.org/EIPS/eip-721" target="_blank" rel="noopener noreferrer">ERC-721 Standard <small>Unique token transfer standard</small></a><a href="https://eips.ethereum.org/EIPS/eip-1155" target="_blank" rel="noopener noreferrer">ERC-1155 Standard <small>Multi-token transfer standard</small></a><a href="https://en.wikipedia.org/wiki/Non-fungible_token" target="_blank" rel="noopener noreferrer">Non-Fungible Tokens <small>History, uses, and criticism</small></a></div></details>
-      <p class="nav-label">Markets &amp; data</p>
-      <details class="nav-group"><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>Track NFT markets<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://www.coingecko.com/en/nft" target="_blank" rel="noopener noreferrer">CoinGecko NFT Rankings <small>Floor prices and volume</small></a><a href="https://defillama.com/nfts/marketplaces" target="_blank" rel="noopener noreferrer">Marketplace Volume <small>Marketplace volume and share</small></a><a href="https://defillama.com/nfts/chains" target="_blank" rel="noopener noreferrer">Volume by Chain <small>NFT volume by chain</small></a><a href="https://opensea.io/collections/top" target="_blank" rel="noopener noreferrer">OpenSea Top Collections <small>Top collections and activity</small></a></div></details>
-      <p class="nav-label">Guides</p>
-      <details class="nav-group"><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>List and sell<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://support.opensea.io/en/articles/8867002-how-do-i-sell-an-nft" target="_blank" rel="noopener noreferrer">Sell on OpenSea <small>Create or accept listings</small></a><a href="https://help.rarible.com/hc/en-us/articles/15201508178957-How-to-sell-list-one-or-more-items" target="_blank" rel="noopener noreferrer">Sell on Rarible <small>List one or many</small></a><a href="https://help.magiceden.io/en/articles/6006555-how-to-sell-solana-nfts-on-magic-eden" target="_blank" rel="noopener noreferrer">Sell on Magic Eden <small>Sell Solana marketplace NFTs</small></a><a href="https://support.opensea.io/en/articles/8867083-what-are-gas-fees" target="_blank" rel="noopener noreferrer">OpenSea Gas Fees <small>Listing and sale costs</small></a></div></details>
-      <p class="nav-label">Safety</p>
-      <details class="nav-group"><summary><svg class="ni-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M4 5h10a3 3 0 0 1 3 3v11a2 2 0 0 0-2-2H4zM20 5h-1a3 3 0 0 0-3 3v11a2 2 0 0 1 2-2h2z"/></svg>Protect every sale<svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg></summary><div class="nav-sub"><a href="https://support.metamask.io/stay-safe/protect-yourself/nfts/nft-listing-scams/" target="_blank" rel="noopener noreferrer">NFT Listing Scams <small>Avoid zero-price listing scams</small></a><a href="https://support.opensea.io/en/articles/8867129-how-can-i-stay-safe-and-protect-my-nfts" target="_blank" rel="noopener noreferrer">OpenSea NFT Safety <small>Protect NFTs from phishing</small></a><a href="https://www.ledger.com/academy/how-to-secure-your-nfts" target="_blank" rel="noopener noreferrer">Secure Your NFTs <small>Secure NFT storage practices</small></a><a href="https://revoke.cash/learn/approvals/how-to-revoke-token-approvals" target="_blank" rel="noopener noreferrer">Revoke Token Approvals <small>Remove risky token approvals</small></a></div></details>
-    </nav>
-    <div class="drawer-foot">
-      <p class="disclose"><strong>Independent dashboard.</strong> Not affiliated with any protocol or issuer named here.</p>
-      <p class="fine">Live figures come from public third-party sources and change. Educational reference only.</p>
-    </div>
-  </aside>
-
-  <div class="wrap">
-    <main class="stage is-hero">
-      <div class="hero" id="app">
-        <h2 class="hero-h2"><span class="hl">Sell your NFT</span> with confidence</h2>
-        <p class="hero-sub">Compare marketplace activity, review listing steps, and check network costs before approving a sale from your wallet.</p>
-        <div class="hero-cta">
-          <a class="cta cta-primary" href="dashboard/" target="_blank" rel="noopener noreferrer">Explore Markets <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
-          <a class="cta cta-ghost" href="https://support.opensea.io/en/articles/8867002-how-do-i-sell-an-nft" target="_blank" rel="noopener noreferrer">How it works</a>
-        </div>
-      </div>
-      <div class="hero-chips">
-        <a class="hchip" href="https://www.coingecko.com/en/coins/ethereum" target="_blank" rel="noopener noreferrer">ETH Price <b id="sig0">—</b> <span class="ext" aria-hidden="true">↗</span></a>
-          <a class="hchip" href="https://www.coingecko.com/en/coins/solana" target="_blank" rel="noopener noreferrer">SOL Price <b id="sig1">—</b> <span class="ext" aria-hidden="true">↗</span></a>
-          <a class="hchip" href="https://ethereum.org/gas/" target="_blank" rel="noopener noreferrer">ETH Gas <b id="sig2">—</b> <span class="ext" aria-hidden="true">↗</span></a>
-      </div>
-    </main>
-  </div>
-  </div>
-
-  <script>
-  (function(){
-    "use strict";
-    var $=function(id){ return document.getElementById(id); };
-    var root=document.documentElement, tl=$("theme-light"), td=$("theme-dark");
-    function applyTheme(t){ if(t==="dark"){ root.setAttribute("data-theme","dark"); } else { root.removeAttribute("data-theme"); } if(tl) tl.setAttribute("aria-pressed", String(t!=="dark")); if(td) td.setAttribute("aria-pressed", String(t==="dark")); }
-    var saved=null; try{ saved=localStorage.getItem("sellnft-theme"); }catch(e){}
-    if(saved) applyTheme(saved);
-    function setTheme(t){ applyTheme(t); try{ localStorage.setItem("sellnft-theme", t); }catch(e){} }
-    if(tl) tl.addEventListener("click", function(){ setTheme("light"); });
-    if(td) td.addEventListener("click", function(){ setTheme("dark"); });
-    var body=document.body, hamb=$("hamb"), scrim=$("scrim"), drawer=$("drawer"), dclose=$("drawer-close");
-    function openD(){ body.classList.add("drawer-open"); hamb.setAttribute("aria-expanded","true"); drawer.setAttribute("aria-hidden","false"); }
-    function closeD(){ body.classList.remove("drawer-open"); hamb.setAttribute("aria-expanded","false"); drawer.setAttribute("aria-hidden","true"); }
-    if(hamb) hamb.addEventListener("click", function(){ body.classList.contains("drawer-open")?closeD():openD(); });
-    if(scrim) scrim.addEventListener("click", closeD);
-    if(dclose) dclose.addEventListener("click", closeD);
-    document.addEventListener("keydown", function(e){ if(e.key==="Escape" && body.classList.contains("drawer-open")) closeD(); });
-    if(drawer) drawer.addEventListener("click", function(e){ if(e.target.closest("a")) closeD(); });
-
-    var db=$("details-btn"), dp=$("details");
-    if(db&&dp) db.addEventListener("click", function(){ var open=dp.classList.toggle("open"); db.setAttribute("aria-expanded", String(open)); db.firstChild.textContent = open?"Hide details ":"Show details "; });
-    function money(n){ if(n>=1e9) return "$"+(n/1e9).toFixed(2)+"B"; if(n>=1e6) return "$"+(n/1e6).toFixed(1)+"M"; if(n>=1e3) return "$"+(n/1e3).toFixed(0)+"K"; return "$"+n.toFixed(0); }
-    function gwei(g){ return (g>=0.1?g.toFixed(2):(g>=0.001?g.toFixed(3):Number(g.toPrecision(2)).toString()))+" gwei"; }
-    function grab(url,opt){ var c="AbortController" in window ? new AbortController():null, t=c?setTimeout(function(){c.abort();},7000):null; var o=opt||{}; if(c) o.signal=c.signal; return fetch(url,o).then(function(r){ if(!r.ok) throw 0; return r.json(); }).finally(function(){ if(t) clearTimeout(t); }); }
-    grab("https://coins.llama.fi/prices/current/coingecko:ethereum").then(function(j){ var c=j&&j.coins&&j.coins["coingecko:ethereum"], v=c&&Number(c.price); if(isFinite(v)&&v>0) $("sig0").textContent="$"+v.toLocaleString("en-US",{maximumFractionDigits:2}); }).catch(function(){});
-    grab("https://coins.llama.fi/prices/current/coingecko:solana").then(function(j){ var c=j&&j.coins&&j.coins["coingecko:solana"], v=c&&Number(c.price); if(isFinite(v)&&v>0) $("sig1").textContent="$"+v.toLocaleString("en-US",{maximumFractionDigits:2}); }).catch(function(){});
-    grab("https://ethereum-rpc.publicnode.com",{ method:"POST", headers:{"Content-Type":"application/json"}, body:'{"jsonrpc":"2.0","id":1,"method":"eth_gasPrice","params":[]}' }).then(function(j){ var wei=j&&j.result?parseInt(j.result,16):NaN; if(isFinite(wei)&&wei>0) $("sig2").textContent=gwei(wei/1e9); }).catch(function(){});
-  })();
-  </script>
+    <div class="c37ec0d"><p id="calc-summary" aria-live="polite"><strong>0.0200 ETH separates the highest and lowest payout.</strong> Compare buyer offers as well as fees: a higher offer can cover a higher platform fee.</p><a class="c6bd84f" href="dashboard/">Set a target payout <span class="c522c8a" aria-hidden="true">↗</span></a></div>
+    <details class="c451667"><summary>Fee sources and calculation method</summary><p>Platform rates were checked on October 9, 2026 against Blur's marketplace homepage (0%), OpenSea Help Center's “What fees do I pay on OpenSea?” (standard secondary sales: 1%), and Rarible's September 1, 2026 FAQ (direct Ethereum listings: 2%). OpenSea private listings typically carry a 0% platform fee. Primary drops and purchases of aggregated listings use separate fee schedules.</p><p>Net proceeds = sale price * (1 - platform fee / 100 - creator royalty / 100) - seller-paid gas. The same sale price, royalty and gas entries apply to each row so the platform fee difference stays visible. Enter each venue's specific costs in the dashboard to compare different offers. Results display at least four decimal places, with extra precision for small amounts.</p></details>
+  </section>
+  <section class="c67850d" aria-labelledby="how-title">
+    <div class="c410234"><h2 id="how-title">How to sell an NFT,<br>from wallet to payout</h2><p>Have your NFT in the selling wallet, confirm its network, and leave enough ETH for any approvals or transactions.</p><a class="c6bd84f" href="dashboard/">Compare your selling costs <span class="c522c8a" aria-hidden="true">↗</span></a></div>
+    <ol class="c1bab41"><li><span class="c7ca184" aria-hidden="true">1</span><div><h3>Check the collection and recent sales</h3><p>Match the NFT's contract address and token ID. Compare completed sales for similar traits, the collection floor and active offers. Asking prices show competition; completed sales show what buyers have paid.</p></div></li><li><span class="c7ca184" aria-hidden="true">2</span><div><h3>Choose a price or an existing offer</h3><p>Set a fixed price and an expiry if you can wait for a buyer. For a faster sale, compare active bids. Use the net payout after all selling costs to choose between them.</p></div></li><li><span class="c7ca184" aria-hidden="true">3</span><div><h3>Review, sign and confirm settlement</h3><p>Check the asset, currency, price, royalty and expiry in the wallet request. Approve the marketplace contract when needed, then sign. After the sale confirms on-chain, check the payment in your wallet and cancel other active listings.</p></div></li></ol>
+  </section>
+  <section class="c308207" aria-labelledby="options-title"><h2 id="options-title">Which NFT selling method fits your timing?</h2><div class="c247815"><article><h3>Fixed-price listing</h3><p>Choose the price a buyer can pay immediately. Use recent comparable sales to set a competitive ask, and give the listing an expiry so you can revisit the price.</p><span class="c8034c6">Timing: depends on a buyer matching your ask.</span></article><article><h3>Accept an offer</h3><p>Sell into an existing item or collection bid. Check that it covers your NFT, the payment token is correct, and the proceeds still meet your target after seller-paid gas.</p><span class="c8034c6">Timing: settlement follows transaction confirmation.</span></article><article><h3>Timed auction</h3><p>Where supported, invite competing bids over a defined period. A reserve price sets the minimum you will accept. Check settlement rules and seller fees for that auction.</p><span class="c8034c6">Timing: auction duration plus settlement.</span></article></div></section>
+  <section class="c60e46b" aria-labelledby="safety-title"><h2 id="safety-title">How to sell NFTs safely</h2><ul><li><strong>Check the signature, not just the screen.</strong> Match the contract, token ID, payment amount and recipient to the sale you intended.</li><li><strong>Keep recovery phrases private.</strong> Use your wallet to approve a sale. Reject requests to type a seed phrase into a website or chat.</li><li><strong>Read approval permissions.</strong> Check whether an approval covers one token or a collection, and revoke permissions you no longer need.</li><li><strong>Verify payment on-chain.</strong> Confirm funds in your wallet before treating a sale as settled. Ignore requests to send an “activation” payment to a buyer.</li></ul></section>
+  <section class="cf9b735" id="faq" aria-labelledby="faq-title"><div class="c814ace"><h2 id="faq-title">Sell NFT FAQ</h2><p>Fees, pricing and payment questions to settle before you list.</p></div><div class="c786834">
+    <details><summary>Where is the cheapest place to sell an NFT?</summary><p>For the Ethereum marketplace fees compared here, Blur charges 0%, OpenSea normally charges 1%, and Rarible charges 2% on direct listings. Compare the final proceeds after collection royalties and gas. The highest available buyer offer can matter more than the lowest fee.</p></details>
+    <details><summary>Can I sell an NFT without paying gas upfront?</summary><p>An off-chain listing signature can be free after the required token approval is in place. Initial approvals, accepting offers and on-chain cancellations can cost gas. On OpenSea, the buyer pays transaction gas when purchasing a fixed-price listing; the seller pays gas when accepting an offer.</p></details>
+    <details><summary>How do I choose a price for my NFT?</summary><p>Start with recent completed sales for the same collection and similar traits. Compare the current floor and funded offers, then calculate the price needed to meet your target payout after fees. For a faster sale, evaluate bids already available for your token.</p></details>
+    <details><summary>How long does it take to sell an NFT?</summary><p>A fixed-price listing waits for a buyer, which can take minutes, days or longer. Accepting a valid funded offer moves directly to the transaction stage. Settlement then depends on network confirmation, while an auction also includes its bidding period.</p></details>
+    <details><summary>What is the difference between platform fees and royalties?</summary><p>A platform fee pays the marketplace for the sale. A creator royalty directs part of the sale price to the collection's creator. Each is calculated separately from the price. Network gas pays for blockchain transactions and is an additional cost.</p></details>
+    <details><summary>Do I receive ETH or WETH when my NFT sells?</summary><p>The listing or offer specifies the payment token. An ETH-denominated fixed-price purchase pays in ETH, while Ethereum offers often use WETH, the wrapped form of ETH. Check the token before accepting. Unwrapping WETH to ETH is a separate transaction with a gas cost.</p></details>
+    <details><summary>Can I sell the same NFT on several marketplaces?</summary><p>You can create listings on multiple compatible marketplaces while holding the NFT. Once it sells, review and cancel any remaining active orders. An unexpired signed order may become fillable again if the NFT returns to your wallet and its approval remains active.</p></details>
+  </div></section>
+  <section class="c0f307f" aria-labelledby="closing-title"><div><h2 id="closing-title">Sell your NFT with the fees worked out.</h2><p>Compare the proceeds. Set your target. Choose your asking price.</p></div><a class="c5167b7" href="dashboard/">Compare my sale <span class="c522c8a" aria-hidden="true">↗</span></a></section>
+</main>
+<footer class="ccaa718 c800a3d"><div class="c5349f6">Sell NFT<span>.</span></div><p>Marketplace fees, creator royalties and the ETH you keep.</p><button type="button" data-section="hero-title">Back to top ↑</button></footer>
+<script src="assets/site.js" defer></script>
 </body>
 </html>

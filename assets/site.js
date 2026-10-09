@@ -34,7 +34,7 @@
       rows.forEach(row => row.querySelectorAll('[data-cell]').forEach(cell => cell.textContent = '—'));
       byId('calc-summary').textContent = 'Complete the selling costs to calculate your proceeds.';
       byId('table-basis').textContent = 'Complete the fields above';
-      document.querySelectorAll('tr.best').forEach(row => row.classList.remove('cc410f9'));
+      document.querySelectorAll('tr.best').forEach(row => row.classList.remove('ca4a4d7'));
       calculateTarget();
       return;
     }
@@ -58,7 +58,7 @@
     });
     const highest = Math.max(...results.map(result => result.net));
     const lowest = Math.min(...results.map(result => result.net));
-    results.forEach(result => result.row.classList.toggle('cc410f9', Math.abs(result.net - highest) < 1e-12));
+    results.forEach(result => result.row.classList.toggle('ca4a4d7', Math.abs(result.net - highest) < 1e-12));
     byId('table-basis').textContent = extraInputs.length ? 'Individual marketplace offers and selling costs' : compact(amount) + ' ETH sale · ' + compact(royaltyRate) + '% royalty · ' + compact(gasCost) + ' ETH seller gas';
     const summary = byId('calc-summary');
     summary.replaceChildren();
